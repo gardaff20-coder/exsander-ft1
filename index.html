@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EXSANDER FT — Pusat Layanan</title>
+<style>
+:root{--blue:#1261df;--bg:#f5f7fb;--text:#172033;--muted:#7d8798;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:#e9edf5;font-family:Arial,Helvetica,sans-serif;color:var(--text)}
+.app{width:100%;max-width:620px;min-height:100vh;margin:auto;background:var(--bg);padding-bottom:90px}
+header{height:76px;background:#fff;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e9edf3}
+.logo{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1261df,#083caa);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:900;margin-right:12px}
+.brand{font-weight:800}.sub{font-size:11px;color:var(--muted);margin-top:4px}
+.banner{margin:18px 18px 22px;border-radius:16px;min-height:154px;padding:25px 22px;color:#fff;overflow:hidden;position:relative;background:linear-gradient(135deg,#087cff,#06379e);box-shadow:0 8px 25px #1261df30}
+.banner:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-50px;top:-55px;background:#ffffff18}
+.banner small{font-weight:700;letter-spacing:1px}.banner h1{font-size:29px;line-height:1.02;margin:10px 0 7px}.banner p{margin:0;font-size:12px;opacity:.9}
+.content{padding:0 20px}.label{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:1px}.welcome h2{font-size:27px;line-height:1.15;margin:10px 0}.welcome p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.badges{display:flex;gap:8px;margin-top:15px}.badge{font-size:10px;font-weight:700;padding:8px 11px;border-radius:18px;background:#e8f0ff;color:var(--blue)}.badge.green{background:#e5f7ed;color:#198653}
+.title{margin:28px 0 14px}.title small{font-size:10px;color:var(--blue);font-weight:800;letter-spacing:1px}.title h3{font-size:21px;margin:7px 0 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.card{background:#fff;border-radius:17px;padding:17px;min-height:157px;box-shadow:0 4px 18px #1720330b;cursor:pointer;transition:.18s}.card:hover{transform:translateY(-2px)}.icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#e8f0ff;font-size:19px;margin-bottom:14px}.card:nth-child(2) .icon{background:#fff2d6}.card:nth-child(3) .icon{background:#ffe6e6}.card:nth-child(4) .icon{background:#e9e6ff}.card:nth-child(5) .icon{background:#e3f8f5}.card:nth-child(6) .icon{background:#f1e7ff}.card small{font-size:9px;color:var(--blue);font-weight:800;letter-spacing:.7px}.card h4{font-size:15px;margin:5px 0 7px}.card p{font-size:10px;color:var(--muted);line-height:1.5;margin:0}
+.page{display:none}.page.active{display:block}.panel{background:#fff;border-radius:17px;padding:18px;margin-top:18px;box-shadow:0 4px 18px #1720330b}.row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #edf0f5;font-size:13px}.row:last-child{border-bottom:0}.danger{color:#df3434;font-weight:700}.search{width:100%;padding:12px 13px;border:1px solid #e0e5ee;border-radius:12px;outline:0}.notice{background:#edf4ff;border-radius:13px;padding:13px;font-size:12px;color:#285cae;line-height:1.5}
+.chat{position:fixed;right:max(18px,calc((100vw - 620px)/2 + 18px));bottom:82px;background:var(--blue);color:#fff;border:0;border-radius:28px;padding:12px 16px;font-weight:800;font-size:11px;box-shadow:0 7px 22px #1261df44;cursor:pointer}
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(620px,100%);height:70px;background:#fff;border-top:1px solid #e6eaf1;display:flex;justify-content:space-around;align-items:center;z-index:5}.nav{border:0;background:none;color:#8b94a4;font-size:9px;cursor:pointer}.nav span{display:block;font-size:18px;margin-bottom:3px}.nav.active{color:var(--blue);font-weight:800}
+.back{border:0;background:none;color:var(--blue);font-weight:700;padding:0;margin-bottom:12px;cursor:pointer}
+@media(max-width:380px){.grid{gap:9px}.card{padding:14px}.banner h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="logo">E</div><div><div class="brand">EXSANDER FT</div><div class="sub">Pusat Layanan Resmi</div></div></header>
+
+<main id="home" class="page active">
+<section class="banner"><small>INFO TOURNAMENT</small><h1>AMAN • FAIR<br>NO RIP</h1><p>Semua informasi FT Exsander dalam satu tempat.</p></section>
+<section class="content">
+<div class="welcome"><div class="label">● SELAMAT DATANG DI EXSANDER FT</div><h2>Semua layanan penting dalam satu aplikasi.</h2><p>Pantau peringkat, periksa blacklist, baca rules, dan hubungi admin dengan lebih mudah.</p><div class="badges"><span class="badge">Layanan resmi</span><span class="badge green">Aman & terpercaya</span></div></div>
+<div class="title"><small>LAYANAN TERSEDIA</small><h3>Jelajahi semua fitur</h3></div>
+<div class="grid">
+<div class="card" onclick="openPage('cs')"><div class="icon">💬</div><small>CUSTOMER SERVICE</small><h4>Chat Admin</h4><p>Hubungi admin yang tersedia untuk bantuan.</p></div>
+<div class="card" onclick="openPage('rank')"><div class="icon">🏆</div><small>KOMPETISI FT</small><h4>Papan Peringkat</h4><p>Lihat peringkat pemain dan hasil pertandingan.</p></div>
+<div class="card" onclick="openPage('blacklist')"><div class="icon">🛡️</div><small>KEAMANAN</small><h4>Daftar Blacklist</h4><p>Periksa nama sebelum melakukan transaksi.</p></div>
+<div class="card" onclick="openPage('rules')"><div class="icon">📖</div><small>KETENTUAN</small><h4>Rules</h4><p>Baca aturan dan ketentuan terbaru.</p></div>
+<div class="card" onclick="openPage('tips')"><div class="icon">💡</div><small>INFORMASI</small><h4>Tips Aman</h4><p>Panduan bermain FT dengan lebih aman.</p></div>
+<div class="card" onclick="openPage('topup')"><div class="icon">💳</div><small>LAYANAN</small><h4>Top Up</h4><p>Informasi layanan top up dan pembayaran.</p></div>
+</div></section>
+</main>
+
+<section id="rank" class="page content"><div class="panel"><button class="back" onclick="openPage('home')">← Kembali</button><h2>🏆 Papan Peringkat</h2><div class="row"><b>1. EXSANDER</b><b>120 Poin</b></div><div class="row"><b>2. PLAYER 02</b><b>95 Poin</b></div><div class="row"><b>3. PLAYER 03</b><b>80 Poin</b></div><div class="row"><b>4. PLAYER 04</b><b>65 Poin</b></div></div></section>
+
+<section id="blacklist" class="page content"><div class="panel"><button class="back" onclick="openPage('home')">← Kembali</button><h2>🛡️ Daftar Blacklist</h2><p style="color:#7d8798;font-size:12px">Cari nama pemain untuk pemeriksaan.</p><input class="search" id="search" placeholder="Ketik nama..." oninput="filterBL()"><div id="bl"><div class="row"><span>Contoh Pemain 01</span><span class="danger">TERDAFTAR</span></div><div class="row"><span>Contoh Pemain 02</span><span class="danger">TERDAFTAR</span></div></div></div></section>
+
+<section id="rules" class="page content"><div class="panel"><button class="back" onclick="openPage('home')">← Kembali</button><h2>📖 Rules Exsander FT</h2><div class="notice" style="margin-top:15px">Baca seluruh aturan sebelum mengikuti pertandingan.</div><div class="row"><span>1. Gunakan data peserta yang benar.</span></div><div class="row"><span>2. Dilarang melakukan kecurangan.</span></div><div class="row"><span>3. Ikuti arahan admin selama pertandingan.</span></div><div class="row"><span>4. Sengketa wajib disertai bukti yang jelas.</span></div></div></section>
+
+<section id="tips" class="page content"><div class="panel"><button class="back" onclick="openPage('home')">← Kembali</button><h2>💡 Tips Aman</h2><div class="row"><span>Pastikan nama/ID pihak yang bertransaksi sudah diperiksa.</span></div><div class="row"><span>Simpan bukti pembayaran dan hasil pertandingan.</span></div><div class="row"><span>Hubungi admin resmi jika menemukan masalah.</span></div></div></section>
+
+<section id="topup" class="page content"><div class="panel"><button class="back" onclick="openPage('home')">← Kembali</button><h2>💳 Top Up</h2><p style="color:#7d8798;font-size:13px;line-height:1.6">Halaman ini bisa dihubungkan ke metode pembayaran atau sistem top up milikmu.</p></div></section>
+
+<section id="cs" class="page content"><div class="panel"><button class="back" onclick="openPage('home')">← Kembali</button><h2>💬 Customer Service</h2><div class="row"><span>Admin Utama</span><button onclick="contact('Admin Utama')" style="border:0;background:#1261df;color:#fff;border-radius:18px;padding:8px 12px">Chat</button></div><div class="row"><span>Admin CS</span><button onclick="contact('Admin CS')" style="border:0;background:#1261df;color:#fff;border-radius:18px;padding:8px 12px">Chat</button></div></div></section>
+</div>
+
+<button class="chat" onclick="openPage('cs')">💬 Chat Admin</button>
+<nav>
+<button class="nav active" onclick="openPage('home',this)"><span>⌂</span>Beranda</button>
+<button class="nav" onclick="openPage('rank',this)"><span>🏆</span>Peringkat</button>
+<button class="nav" onclick="openPage('blacklist',this)"><span>🛡</span>Blacklist</button>
+<button class="nav" onclick="openPage('rules',this)"><span>📖</span>Rules</button>
+<button class="nav" onclick="openPage('tips',this)"><span>💡</span>Tips</button>
+</nav>
+<script>
+function openPage(id,btn){
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.nav').forEach(x=>x.classList.remove('active'));
+ if(btn) btn.classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function filterBL(){
+ const q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('#bl .row').forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?'flex':'none');
+}
+function contact(name){alert('Hubungi '+name+'. Ganti fungsi ini dengan link WhatsApp/CS milikmu.')}
+</script>
+</body>
+</html>
